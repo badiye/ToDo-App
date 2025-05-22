@@ -24,8 +24,7 @@
 
   <body>
     <header>
-
-    <!-- #greeting -->
+    <!-- greeting -->
     <h1><% current = Time.current.hour %>
     <%= if current >= 5 && (current < 12)
       "Good Morning!"
@@ -44,7 +43,7 @@
       <p>Welcome! This is your first visit.</p>
     <% end %>
     
-    <!-- #page visit -->
+    <!-- page visit -->
     <% if @page_visit > 1 %>
       <p>You have visited this page <%= @page_visit %> times.</p>
     <% else %>
@@ -58,16 +57,12 @@
     </main>
 
     <footer>
-
       <!-- Last visit time -->
       <% if @page_visit > 1 %>
         <p>Last Visited: <%= time_ago_in_words(session[:last_visited])%> ago</p>
       <% else %>
         <p>You have never visited before.</p>
       <% end %>
-
-      
-
     </footer>
   </body>
 </html>
